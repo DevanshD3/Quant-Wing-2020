@@ -9,7 +9,7 @@ def binomial_tree_call_put (n, t, s0, sigma, r, k, call = True ,arr_out=False):
     dt = t/n
     u = numpy.exp(sigma*(dt**(0.5)))
     d = 1/u
-    p = (numpy.exp(r*dt)-d) / (u-d)
+    p = (numpy.exp(r*dt)-d) / (u-d) #price of the option
 
     # price tree
     price_tree = numpy.zeros([n+1,n+1])
